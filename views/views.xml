@@ -42,6 +42,44 @@
                                <field name="description"/>
                            </group>
                        </div>
+                       <div>
+                           <group>
+                              <field name="pic_perusahaan"/>
+                              <field name="jenis_po"/>
+                              <field name="nama_customer"/>
+                              <field name="kode_customer"/>
+                              <field name="tanggal_konfirm_user"/>
+                              <field name="tanggal_terima_po"/>
+                              <field name="name"/>
+                              <field name="tanggal_permintaan"/>
+                              <field name="requested_by"/>
+                              <field name="vessel_divisi"/>
+                              <field name="project_unit"/>
+                              <field name="kode_budget"/>
+                              <field name="prioritas"/>
+                              <field name="nama_produk"/>
+                              <field name="jenis_tipe"/>
+                              <field name="vol"/>
+                              <field name="satuan"/>
+                              <field name="supply"/>
+                              <field name="kode_unit_barang"/>
+                              <field name="status_list"/>
+                              <field name="nomor_do"/>
+                              <field name="tanggal_do"/>
+                              <field name="est_date"/>
+                              <field name="nama_penerima"/>
+                              <field name="remark"/>
+                              <field name="date_remark"/>
+                              <field name="remark_2"/>
+                              <field name="date_remark_2"/>
+                              <field name="remark_3"/>
+                              <field name="date_remark_3"/>
+                              <field name="remark_4"/>
+                              <field name="date_remark_4"/>
+                              <field name="remark_5"/>
+                              <field name="date_remark_5"/>
+                           </group>
+                       </div>
                    </sheet>
                </form>
            </field>
