@@ -2,7 +2,7 @@
   <data>
     <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="test_email.list">
+    <record model="ir.ui.view" id="cron_demo.list">
       <field name="name">test email list</field>
       <field name="model">test.email</field>
       <field name="arch" type="xml">
@@ -17,7 +17,7 @@
 
     <!-- actions opening views on models -->
 
-    <record model="ir.actions.act_window" id="test_email.action_window">
+    <record model="ir.actions.act_window" id="cron_demo.action_window">
       <field name="name">test email window</field>
       <field name="res_model">test.email</field>
       <field name="view_mode">tree,form</field>
@@ -49,7 +49,7 @@
 
     <!-- server action to the one above -->
 
-    <record model="ir.actions.server" id="test_email.action_server">
+    <record model="ir.actions.server" id="cron_demo.action_server">
       <field name="name">test email server</field>
       <field name="model_id" ref="model_test_email"/>
       <field name="state">code</field>
@@ -65,19 +65,19 @@
 
     <!-- Top menu item -->
 
-    <menuitem name="test email" id="test_email.menu_root"/>
+    <menuitem name="test email" id="cron_demo.menu_root"/>
 
     <!-- menu categories -->
 
-    <menuitem name="Menu 1" id="test_email.menu_1" parent="test_email.menu_root"/>
-    <menuitem name="Menu 2" id="test_email.menu_2" parent="test_email.menu_root"/>
+    <menuitem name="Menu 1" id="cron_demo.menu_1" parent="cron_demo.menu_root"/>
+    <menuitem name="Menu 2" id="cron_demo.menu_2" parent="cron_demo.menu_root"/>
 
     <!-- actions -->
 
-    <menuitem name="List" id="test_email.menu_1_list" parent="test_email.menu_1"
-              action="test_email.action_window"/>
-    <menuitem name="Server to list" id="test_email" parent="test_email.menu_2"
-              action="test_email.action_server"/>
+    <menuitem name="List" id="cron_demo.menu_1_list" parent="cron_demo.menu_1"
+              action="cron_demo.action_window"/>
+    <menuitem name="Server to list" id="cron_demo" parent="cron_demo.menu_2"
+              action="cron_demo.action_server"/>
 
   </data>
 </odoo>
