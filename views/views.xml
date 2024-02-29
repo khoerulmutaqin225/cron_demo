@@ -1,0 +1,83 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="test_email.list">
+      <field name="name">test email list</field>
+      <field name="model">test.email</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="test_email.action_window">
+      <field name="name">test email window</field>
+      <field name="res_model">test.email</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_test_email_form" model="ir.ui.view">
+           <field name="name">test.email.form</field>
+           <field name="model">test.email</field>
+           <field name="arch" type="xml">
+               <form>
+                   <header>
+                       <button name="action_send_email" string="Send by email" type="object"/>
+                   </header>
+                   <sheet>
+                       <field name="name" readonly="1"/>
+                       <div>
+                           <group>
+                               <field name="partner_id"/>
+                               <field name="value"/>
+                               <field name="value2"/>
+                               <field name="description"/>
+                           </group>
+                       </div>
+                   </sheet>
+               </form>
+           </field>
+       </record>
+
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.server" id="test_email.action_server">
+      <field name="name">test email server</field>
+      <field name="model_id" ref="model_test_email"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="test email" id="test_email.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Menu 1" id="test_email.menu_1" parent="test_email.menu_root"/>
+    <menuitem name="Menu 2" id="test_email.menu_2" parent="test_email.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List" id="test_email.menu_1_list" parent="test_email.menu_1"
+              action="test_email.action_window"/>
+    <menuitem name="Server to list" id="test_email" parent="test_email.menu_2"
+              action="test_email.action_server"/>
+
+  </data>
+</odoo>
