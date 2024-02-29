@@ -28,6 +28,7 @@
         'views/views.xml',
         'views/templates.xml',
         'views/email_template.xml',
+        'views/cron.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

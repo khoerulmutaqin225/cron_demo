@@ -8,15 +8,18 @@
            <field name="email_from">${(object.company_id.email)}</field>
            <!-- <field name="email_from" >${object.partner_id.email}</field> -->
            <field name="email_to" >${object.partner_id.email}</field>
-           <field name="subject">order ${object.name}</field>
+           <field name="subject">Order from PT ARMADA SAMUDRA GLOBAL</field>
            <field name="auto_delete" eval="True"/>
            <field name="lang">${object.partner_id.lang}</field>
            <field name="body_html"><![CDATA[
-                <p>Hi ${object.name}</p> 
+                <p>Halo! Ini adalah <b>Admin Anda</b> dari <b>Barokah Perkasa Group</b> </p>
+                Saya izin memberitahukan paket Anda dengan <b>Nomor PO 3927/SMD/BGP-01-B/XII/2023</b>.
                 <br/>
-                <p>Here is the details of open invoices</p>
-                 ${data}
+                dan <b>Nomor DO BBR-3927/SMD/BGP-01-B/XII/2023-1</b>.
                 <br/>
+                Sekarang memiliki status <b>${object.status}</b>
+                <br/>
+                Terima kasih.
                  ]]>
            </field>
        </record>
